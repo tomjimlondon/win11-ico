@@ -37,7 +37,13 @@ jobs:
           HASH_DIR="./Folder11-Ico/hash"
           TEMP_DIR=$(mktemp -d)
 
+          echo "SVG_DIR: $SVG_DIR"
+          echo "ICO_DIR: $ICO_DIR"
+          echo "HASH_DIR: $HASH_DIR"
+          echo "TEMP_DIR: $TEMP_DIR"
+
           mkdir -p "$ICO_DIR" "$HASH_DIR"
+          echo "Directories created"
 
           for svg_file in "$SVG_DIR"/*.svg; do
             [ -f "$svg_file" ] || continue
